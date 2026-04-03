@@ -351,7 +351,7 @@ const App = () => {
 
         {/* Shape Toggles */}
         <div className="space-y-2">
-          <span className="text-xs font-bold uppercase tracking-widest text-neutral-500 block hover:bg-gray-200 hover:text-black">Formes Actives</span>
+          <span className="text-xs font-bold uppercase tracking-widest text-neutral-500 block">Formes Actives</span>
           <div className="grid grid-cols-2 gap-1">
             {(['empty', 'square', 'triangle', 'quarter'] as const).map(key => (
               <button
@@ -359,8 +359,8 @@ const App = () => {
                 onClick={() => handleToggle(key)}
                 className={`py-2 text-xs border border-neutral-800 transition-all uppercase ${
                   toggles[key] 
-                    ? 'bg-white text-black font-black' 
-                    : 'bg-black text-white hover:bg-gray-200'
+                    ? 'bg-gray-200 text-black font-black' 
+                    : 'bg-black text-white hover:bg-gray-200 hover:text-black'
                 }`}
               >
                 {key === 'empty' ? 'Vide' : key === 'square' ? 'Carré' : key === 'triangle' ? 'Triangle' : 'Quart'}

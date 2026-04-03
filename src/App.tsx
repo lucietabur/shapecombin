@@ -14,7 +14,7 @@ interface Toggles {
 const App = () => {
   const [gridSize, setGridSize] = useState<1 | 4 | 9>(4);
   const [toggles, setToggles] = useState<Toggles>({
-    empty: true,
+    empty: false,
     square: true,
     triangle: true,
     quarter: true,
@@ -380,7 +380,7 @@ const App = () => {
             className={`w-full py-2 text-xs border border-neutral-800 transition-all font-black ${
               isAnimating 
                 ? 'bg-red-600 text-white border-red-600 animate-pulse' 
-                : 'bg-black text-white hover:bg-gray-200'
+                : 'bg-black text-white hover:bg-gray-200 hover:text-black'
             }`}
           >
             {isAnimating ? '⏹ ARRÊTER' : '▶ LANCER L\'ANIMATION'}

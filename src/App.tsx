@@ -351,7 +351,7 @@ const App = () => {
 
         {/* Shape Toggles */}
         <div className="space-y-2">
-          <span className="text-xs font-bold uppercase tracking-widest text-neutral-500 block">Formes Actives</span>
+          <span className="text-xs font-bold uppercase tracking-widest text-neutral-500 block hover:bg-gray-200 hover:text-black">Formes Actives</span>
           <div className="grid grid-cols-2 gap-1">
             {(['empty', 'square', 'triangle', 'quarter'] as const).map(key => (
               <button

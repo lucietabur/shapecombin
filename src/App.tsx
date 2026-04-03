@@ -360,7 +360,7 @@ const App = () => {
                 className={`py-2 text-xs border border-neutral-800 transition-all uppercase ${
                   toggles[key] 
                     ? 'bg-black text-white font-black' 
-                    : 'bg-white text-black hover:bg-gray-200'
+                    : 'bg-black text-white hover:bg-gray-200 hover:text-black'
                 }`}
               >
                 {key === 'empty' ? 'Vide' : key === 'square' ? 'Carré' : key === 'triangle' ? 'Triangle' : 'Quart'}

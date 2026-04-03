@@ -359,8 +359,8 @@ const App = () => {
                 onClick={() => handleToggle(key)}
                 className={`py-2 text-xs border border-neutral-800 transition-all uppercase ${
                   toggles[key] 
-                    ? 'bg-black text-white font-black' 
-                    : 'bg-black text-white hover:bg-gray-200 hover:text-black'
+                    ? 'bg-white text-black font-black' 
+                    : 'bg-black text-white hover:bg-gray-200'
                 }`}
               >
                 {key === 'empty' ? 'Vide' : key === 'square' ? 'Carré' : key === 'triangle' ? 'Triangle' : 'Quart'}

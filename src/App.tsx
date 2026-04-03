@@ -339,8 +339,8 @@ const App = () => {
                 }}
                 className={`py-2 text-xs border border-neutral-800 transition-all ${
                   gridSize === size 
-                    ? 'bg-white text-black font-black' 
-                    : 'text-neutral-400 hover:bg-neutral-900 hover:text-white'
+                    ? 'bg-black text-white font-black' 
+                    : 'bg-white text-black hover:bg-gray-200'
                 }`}
               >
                 {size === 1 ? '1×1' : size === 4 ? '2×2' : '3×3'}
@@ -359,8 +359,8 @@ const App = () => {
                 onClick={() => handleToggle(key)}
                 className={`py-2 text-xs border border-neutral-800 transition-all uppercase ${
                   toggles[key] 
-                    ? 'bg-white text-black font-black' 
-                    : 'text-neutral-600 hover:bg-neutral-900 hover:text-neutral-400'
+                    ? 'bg-black text-white font-black' 
+                    : 'bg-white text-black hover:bg-gray-200'
                 }`}
               >
                 {key === 'empty' ? 'Vide' : key === 'square' ? 'Carré' : key === 'triangle' ? 'Triangle' : 'Quart'}
@@ -380,7 +380,7 @@ const App = () => {
             className={`w-full py-2 text-xs border border-neutral-800 transition-all font-black ${
               isAnimating 
                 ? 'bg-red-600 text-white border-red-600 animate-pulse' 
-                : 'bg-white text-black hover:bg-neutral-200'
+                : 'bg-white text-black hover:bg-gray-200'
             }`}
           >
             {isAnimating ? '⏹ ARRÊTER' : '▶ LANCER L\'ANIMATION'}
@@ -427,7 +427,7 @@ const App = () => {
           <div className="grid grid-cols-2 gap-1">
             <button
               onClick={downloadSVG}
-              className="py-3 text-xs border font-black transition-all bg-neutral-900 border-neutral-800 text-white hover:bg-white hover:text-black"
+              className="py-3 text-xs border font-black transition-all bg-white border-neutral-800 text-black hover:bg-gray-200"
             >
               ↓ SVG ACTUEL
             </button>
@@ -436,7 +436,7 @@ const App = () => {
             <button
               onClick={downloadAllPDFs}
                 disabled={!isTwoByTwo}
-                className={`w-full py-3 text-xs border font-black transition-all ${isTwoByTwo ? 'bg-green-600 border-green-600 text-white hover:bg-white hover:text-green-700 hover:text-black' : 'bg-neutral-200 border-neutral-300 text-neutral-500 cursor-not-allowed'}`}
+                className={`w-full py-3 text-xs border font-black transition-all ${isTwoByTwo ? 'bg-green-600 border-green-600 text-white hover:bg-green-700' : 'bg-gray-300 border-gray-400 text-gray-500 cursor-not-allowed'}`}
             >
               ↓ PDF TOUTES FORMES (ZIP si plusieurs fichiers)
             </button>
@@ -483,13 +483,13 @@ const App = () => {
           <div className="mt-8 flex gap-2 w-full max-w-xs">
             <button
               onClick={() => setCurrentIndex(prev => Math.max(0, prev - 1))}
-              className="flex-1 py-3 border border-neutral-800 bg-black hover:bg-neutral-900 text-white text-xs transition-all"
+              className="flex-1 py-3 border border-neutral-800 bg-white hover:bg-gray-200 text-black text-xs transition-all"
             >
               ⬅ PRÉCÉDENT
             </button>
             <button
               onClick={() => setCurrentIndex(prev => Math.min(totalCombinations - 1, prev + 1))}
-              className="flex-1 py-3 border border-neutral-800 bg-black hover:bg-neutral-900 text-white text-xs transition-all"
+              className="flex-1 py-3 border border-neutral-800 bg-white hover:bg-gray-200 text-black text-xs transition-all"
             >
               SUIVANT ➡
             </button>
